@@ -17,6 +17,8 @@ import './i18n/config';
 import './components/HomeComponent';
 import HomeComponent from './components/HomeComponent';
 
+import AxiosComponent from './components/AxiosComponent';
+
 function App() {
   const messages = ['React', 'Re: React', 'Re:Re: React'];
   const numbers = [1, 2, 3, 4, 5];
@@ -42,6 +44,7 @@ function App() {
         <FlavorForm />
         <Reservation />
         <HomeComponent />
+        <AxiosComponent />
       </header>
     </div>
   );

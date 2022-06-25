@@ -8,3 +8,6 @@
 
 [3] i18n
   linsong@linsongdeMacBook-Air my-app % npm install react-i18next i18next --save
+
+[4] Axios
+  linsong@linsongdeMacBook-Air my-app % npm install axios --save
