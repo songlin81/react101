@@ -1,13 +1,21 @@
 import React from 'react';
 
 class RefsComponent extends React.Component {
-  handleClick() {
-    this.refs.myInput.focus();
+
+  constructor(props) {
+    super(props);
+    this.myInput = React.createRef();
   }
+
+  handleClick() {
+    this.myInput.current.focus();
+
+  }
+
   render() {
     return (
       <div>
-        <input type="text" ref="myInput" />
+        <input type="text" ref={this.myInput} />
         <input
           type="button"
           value="Click to focus"
