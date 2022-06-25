@@ -1,0 +1,16 @@
+{
+  "header": {
+    "register": "注册",
+    "signin": "登录",
+    "home": "首页"
+  },
+  "footer": {
+    "detail": "版权所有 @ React"
+  },
+  "home": {
+    "mainTip": "我是登录页面"
+  },
+  "content": {
+    "description": "这是个中文段落"
+  }
+}

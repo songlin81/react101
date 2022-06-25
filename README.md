@@ -5,3 +5,6 @@
 
 [2] Ref to Jquery
   linsong@linsongdeMacBook-Air my-app % npm install jquery --save
+
+[3] i18n
+  linsong@linsongdeMacBook-Air my-app % npm install react-i18next i18next --save

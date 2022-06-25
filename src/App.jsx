@@ -9,6 +9,13 @@ import Blog from './components/Blog';
 import Counter from './components/Counter';
 import UserGist from './components/UserGist';
 import RefsComponent from './components/RefsComponent';
+import HelloMessage from './components/HelloMessage';
+import FlavorForm from './components/FlavorForm';
+import Reservation from './components/Reservation';
+
+import './i18n/config';
+import './components/HomeComponent';
+import HomeComponent from './components/HomeComponent';
 
 function App() {
   const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -31,6 +38,10 @@ function App() {
         <Counter />
         <UserGist source="https://api.github.com/users/octocat/gists" />
         <RefsComponent />
+        <HelloMessage />
+        <FlavorForm />
+        <Reservation />
+        <HomeComponent />
       </header>
     </div>
   );
