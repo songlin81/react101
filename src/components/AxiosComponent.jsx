@@ -35,11 +35,65 @@ class AxiosComponent extends React.Component {
     this.setState({body: event.target.value});
   }
  
+  changeId =e => {
+    let id = e.target.value;
+    this.setState({
+      id : id
+    })
+  }
+  
+  changeTitle = e => {
+    let title = e.target.value;
+    this.setState({
+      title : title
+    })
+  }
+ 
+  changeBody = e => {
+    let body = e.target.value;
+    this.setState({
+      body : body
+    })
+  }
+ 
+  addOrUpdatePost = e => {
+    e.preventDefault();
+    if ( this.state.title === '' || this.state.body === '' || this.state.id === '' ) {
+      alert( 'No field should be empty' );
+      return ;
+    } else if ( this.state.id > this.state.data.length + 1 ) { 
+      alert( 'Please use the next id' );
+    } else {
+      if ( this.state.data[ this.state.id - 1 ] !== undefined ) {
+        // update the post
+      } else {
+        console.log("start to post");
+      axios.post( "https://jsonplaceholder.typicode.com/posts" , {
+        id : this.state.id + 1 ,
+        title : this.state.title,
+        body : this.state.body
+      })
+      .then( res => {
+        console.log(res);
+        let newPost = res.data;
+        let newData = [...this.state.data, newPost];
+        this.setState({
+          id : this.state.id + 1 ,
+          title : '' ,
+          body : '' ,
+          data : newData
+        });
+      })
+      .catch( err => console.log(err));
+      }
+    }
+  }
+
   render() {
     return (
       <div className = 'ArticleContainer'>
-         <h1>Simple blog with React</h1>
-        <div className='AddArticle'>
+        <h1>Simple blog with React</h1>
+        {/* <div className='AddArticle'>
           <b>id of article: </b>
           <input type='number' value={this.state.id} onChange={this.handleChange.bind(this)} />
           <form>
@@ -47,6 +101,16 @@ class AxiosComponent extends React.Component {
           <textarea placeholder='Enter Body' value={this.state.body} onChange={this.handleChangeBody.bind(this)}>
           </textarea>
           <input type='submit' value='Add/Update Post'/>
+          </form>
+        </div> */}
+        <div className='AddArticle'>
+          <b>id of article: </b>
+          <input type='number' onChange={this.changeId} value={this.state.id} />
+          <form>
+          <input onChange={this.changeTitle} type='text' placeholder='Title' value={this.state.title} />
+          <textarea onChange={this.changeBody} placeholder='Enter Body' value={this.state.body}>
+          </textarea>
+          <input onClick={this.addOrUpdatePost} type='submit' value='Add/Update Post'/>
           </form>
         </div>
         {
