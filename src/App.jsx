@@ -19,6 +19,7 @@ import HomeComponent from './components/HomeComponent';
 
 import AxiosComponent from './components/AxiosComponent';
 import Login from './components/Login';
+import Parent from './performance/Parent';
 
 function App() {
   const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -47,6 +48,7 @@ function App() {
         <HomeComponent />
         <AxiosComponent />
         <Login />
+        <Parent />
       </header>
     </div>
   );

@@ -16,3 +16,5 @@
   linsong@linsongdeMacBook-Air my-app % npm i redux --save
   linsong@linsongdeMacBook-Air my-app % npm i react-redux --save
   linsong@linsongdeMacBook-Air my-app % npm install redux-thunk -S
+
+[6] Todo: react-loadable
