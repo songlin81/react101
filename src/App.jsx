@@ -18,6 +18,7 @@ import './components/HomeComponent';
 import HomeComponent from './components/HomeComponent';
 
 import AxiosComponent from './components/AxiosComponent';
+import Login from './components/Login';
 
 function App() {
   const messages = ['React', 'Re: React', 'Re:Re: React'];
@@ -45,6 +46,7 @@ function App() {
         <Reservation />
         <HomeComponent />
         <AxiosComponent />
+        <Login />
       </header>
     </div>
   );
