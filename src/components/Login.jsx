@@ -30,11 +30,11 @@ class Login extends Component {
 
 export default connect(
     //注意此处是方法mapStateToProps方法的简写,接收redux中的状态对象集合state,本质是传递redux中的状态给UI组件
-
     state => ({
         login:state.loginState,
         authority:state.authorityState
     }),
+    
     //注意此处是方法mapDispatchToProps方法的简写,接收redux中的dispatch方法,本质是传递redux中reducer方法给UI组件
     {
        loginDispatch:loginAction,
